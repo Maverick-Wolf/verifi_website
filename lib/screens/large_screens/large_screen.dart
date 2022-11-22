@@ -42,7 +42,7 @@ class LargeScreen extends StatelessWidget {
               child: PageView(
                 pageSnapping: false,
                 scrollDirection: Axis.vertical,
-                children: const [LargeHomeScreen(), LargeWorkScreen()],
+                children: const [LargeWorkScreen(), LargeHomeScreen()],
               )),
         ],
       ),
