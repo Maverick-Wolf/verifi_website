@@ -1,6 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:verifi_website/screens/large_screens/large_screen.dart';
+import 'package:verifi_website/screens/large_screens/main_large_screen.dart';
 import 'package:verifi_website/screens/small_screens/small_screen.dart';
 import 'package:verifi_website/widgets/responsiveness.dart';
 
