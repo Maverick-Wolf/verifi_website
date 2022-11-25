@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:verifi_website/screens/large_screens/about_sceen.dart';
 import 'package:verifi_website/screens/large_screens/features_screen.dart';
+import 'package:verifi_website/screens/large_screens/future_plans_screen.dart';
 import 'package:verifi_website/screens/large_screens/home_screen.dart';
 import 'package:verifi_website/screens/large_screens/work_screen.dart';
 import 'package:verifi_website/theme.dart';
@@ -11,13 +13,13 @@ class LargeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
-    PageController controller = PageController(viewportFraction: 1.05);
+    PageController controller = PageController(viewportFraction: 1.0);
     return Scaffold(
       backgroundColor: primaryColor,
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(left: 50.0, top: 25.0),
+            padding: const EdgeInsets.only(left: 50.0, top: 25.0, right: 50.0),
             child: Row(
               children: [
                 Image.asset(
@@ -46,9 +48,11 @@ class LargeScreen extends StatelessWidget {
                 pageSnapping: false,
                 scrollDirection: Axis.vertical,
                 children: const [
-                  LargeHomeScreen(),
-                  LargeWorkScreen(),
-                  LargeFeaturesScreen(),
+                  // LargeHomeScreen(),
+                  // LargeWorkScreen(),
+                  // LargeFeaturesScreen(),
+                  LargeAboutScreen(),
+                  LargeFuturePlansScreen(),
                 ],
               )),
         ],
