@@ -2,6 +2,8 @@ import 'package:blobs/blobs.dart';
 import 'package:flutter/material.dart';
 import 'package:verifi_website/theme.dart';
 
+import '../../widgets/crad_container.dart';
+
 class LargeFuturePlansScreen extends StatefulWidget {
   const LargeFuturePlansScreen({Key? key}) : super(key: key);
 
@@ -71,121 +73,29 @@ class _LargeFuturePlansScreenState extends State<LargeFuturePlansScreen> {
                       children: [
                         Column(
                           children: [
-                            Container(
-                              padding: const EdgeInsets.all(10.0),
-                              decoration: const BoxDecoration(
-                                  color: lightGrey,
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(20.0))),
-                              height: height * 0.38,
-                              width: width * 0.1851,
-                              child: Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceAround,
-                                children: [
-                                  Image.asset(
-                                    'assets/images/achievements.png',
-                                    height: height * 0.09,
-                                    width: width * 0.058,
-                                  ),
-                                  const Text(
-                                    "Achievements",
-                                    style: TextStyle(
-                                        color: white,
-                                        fontSize: 24.0,
-                                        fontWeight: FontWeight.w600,
-                                        fontFamily: font),
-                                  ),
-                                  const Text(
-                                    "Contributions earn achievements which can earn you NFT wearables, real world collectibles, and more!",
-                                    style: TextStyle(
-                                        color: grey,
-                                        fontSize: 12.0,
-                                        fontFamily: font),
-                                    textAlign: TextAlign.center,
-                                  ),
-                                ],
-                              ),
-                            ),
+                            const CardConatiner(
+                                image: "achievements",
+                                title: "Achievements",
+                                description:
+                                    "Contributions earn achievements which can earn you NFT wearables, real world collectibles, and more!"),
                             SizedBox(
                               height: height * 0.03,
                             ),
-                            Container(
-                              padding: const EdgeInsets.all(10.0),
-                              decoration: const BoxDecoration(
-                                  color: lightGrey,
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(20.0))),
-                              height: height * 0.38,
-                              width: width * 0.1851,
-                              child: Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceAround,
-                                children: [
-                                  Image.asset(
-                                    'assets/images/minting.png',
-                                    height: height * 0.09,
-                                    width: width * 0.058,
-                                  ),
-                                  const Text(
-                                    "VeriFi NFT Mint",
-                                    style: TextStyle(
-                                        color: white,
-                                        fontSize: 24.0,
-                                        fontWeight: FontWeight.w600,
-                                        fontFamily: font),
-                                  ),
-                                  const Text(
-                                    "Our own NFTs will be made available, complete with wearables earned from achievements. Early adopters will be added to the whitelist.",
-                                    style: TextStyle(
-                                        color: grey,
-                                        fontSize: 12.0,
-                                        fontFamily: font),
-                                    textAlign: TextAlign.center,
-                                  ),
-                                ],
-                              ),
-                            ),
+                            const CardConatiner(
+                                image: "minting",
+                                title: "VeriFi NFT Mint",
+                                description:
+                                    "Our own NFTs will be made available, complete with wearables earned from achievements. Early adopters will be added to the whitelist."),
                           ],
                         ),
                         SizedBox(
                           width: height * 0.03,
                         ),
-                        Container(
-                          padding: const EdgeInsets.all(10.0),
-                          decoration: const BoxDecoration(
-                              color: lightGrey,
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(20.0))),
-                          height: height * 0.38,
-                          width: width * 0.1851,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: [
-                              Image.asset(
-                                'assets/images/airdrop.png',
-                                height: height * 0.09,
-                                width: width * 0.058,
-                              ),
-                              const Text(
-                                "Token Airdrop",
-                                style: TextStyle(
-                                    color: white,
-                                    fontSize: 24.0,
-                                    fontWeight: FontWeight.w600,
-                                    fontFamily: font),
-                              ),
-                              const Text(
-                                "Karma will be redeemable for crypto as an ERC-20 token. Check out our whitepaper and roadmap for the future utility behind this token.",
-                                style: TextStyle(
-                                    color: grey,
-                                    fontSize: 12.0,
-                                    fontFamily: font),
-                                textAlign: TextAlign.center,
-                              ),
-                            ],
-                          ),
-                        ),
+                        const CardConatiner(
+                            image: "airdrop",
+                            title: "Token Airdrop",
+                            description:
+                                "Karma will be redeemable for crypto as an ERC-20 token. Check out our whitepaper and roadmap for the future utility behind this token."),
                       ],
                     )),
               ],
