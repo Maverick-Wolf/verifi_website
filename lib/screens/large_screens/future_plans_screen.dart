@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:blobs/blobs.dart';
 import 'package:flutter/material.dart';
 import 'package:verifi_website/theme.dart';
@@ -42,8 +43,9 @@ class _LargeFuturePlansScreenState extends State<LargeFuturePlansScreen> {
                 SizedBox(
                   width: width * 0.4,
                   height: height * 0.5,
-                  child: const Text(
+                  child: const AutoSizeText(
                     "Upcoming\nFeatures",
+                    maxLines: 2,
                     style: TextStyle(
                         color: white,
                         fontSize: 60.0,

@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:blobs/blobs.dart';
 import 'package:flutter/material.dart';
 import 'package:verifi_website/theme.dart';
@@ -40,14 +41,15 @@ class _LargeFeaturesScreenState extends State<LargeFeaturesScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
-                      Text(
+                      AutoSizeText(
                         "Current\nFeatures",
+                        maxLines: 2,
                         style: TextStyle(
                             color: white,
                             fontSize: 60.0,
                             fontWeight: FontWeight.bold),
                       ),
-                      Text(
+                      AutoSizeText(
                         "up and running features we have on our platform at the moment",
                         maxLines: 2,
                         style: TextStyle(color: grey, fontSize: 23.0),
