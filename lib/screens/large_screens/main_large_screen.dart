@@ -1,3 +1,4 @@
+import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:verifi_website/screens/large_screens/about_sceen.dart';
 import 'package:verifi_website/screens/large_screens/features_screen.dart';
@@ -6,9 +7,15 @@ import 'package:verifi_website/screens/large_screens/home_screen.dart';
 import 'package:verifi_website/screens/large_screens/work_screen.dart';
 import 'package:verifi_website/theme.dart';
 
-class LargeScreen extends StatelessWidget {
+class LargeScreen extends StatefulWidget {
   const LargeScreen({super.key});
 
+  @override
+  State<LargeScreen> createState() => _LargeScreenState();
+}
+
+class _LargeScreenState extends State<LargeScreen> {
+  int _currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -41,20 +48,48 @@ class LargeScreen extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
-              height: height * 0.89,
-              child: PageView(
-                controller: controller,
-                pageSnapping: false,
-                scrollDirection: Axis.vertical,
-                children: const [
-                  // LargeHomeScreen(),
-                  // LargeWorkScreen(),
-                  // LargeFeaturesScreen(),
-                  LargeAboutScreen(),
-                  LargeFuturePlansScreen(),
-                ],
-              )),
+          Row(
+            children: [
+              SizedBox(
+                height: height * 0.89,
+                width: width * 0.97,
+                child: PageView(
+                  controller: controller,
+                  onPageChanged: (value) {
+                    setState(() {
+                      _currentIndex = value;
+                    });
+                  },
+                  pageSnapping: false,
+                  scrollDirection: Axis.vertical,
+                  children: const [
+                    LargeHomeScreen(),
+                    LargeWorkScreen(),
+                    LargeFeaturesScreen(),
+                    LargeFuturePlansScreen(),
+                    LargeAboutScreen(),
+                  ],
+                ),
+              ),
+              DotsIndicator(
+                dotsCount: 5,
+                onTap: (position) {
+                  controller.animateToPage(position.toInt(),
+                      duration: const Duration(milliseconds: 1000),
+                      curve: Curves.easeInOutSine);
+                },
+                position: _currentIndex.toDouble(),
+                decorator: DotsDecorator(
+                    size: const Size.square(9.0),
+                    activeSize: const Size(9.0, 18.0),
+                    activeShape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5.0)),
+                    color: Colors.white,
+                    activeColor: Colors.blue),
+                axis: Axis.vertical,
+              ),
+            ],
+          ),
         ],
       ),
     );
