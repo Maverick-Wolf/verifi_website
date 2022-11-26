@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:verifi_website/screens/small_screens/home_sceen.dart';
+import 'package:verifi_website/screens/small_screens/work_screen.dart';
 import 'package:verifi_website/theme.dart';
 
 class SmallScreen extends StatelessWidget {
@@ -50,6 +51,7 @@ class SmallScreen extends StatelessWidget {
                     scrollDirection: Axis.vertical,
                     children: const [
                       SmallHomeScreen(),
+                      SmallWorkScreen(),
                     ],
                   ),
                 ),
