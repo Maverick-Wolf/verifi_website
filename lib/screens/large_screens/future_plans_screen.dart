@@ -24,33 +24,17 @@ class _LargeFuturePlansScreenState extends State<LargeFuturePlansScreen> {
         child: Stack(
           children: [
             Positioned(
-              bottom: -50.0,
-              left: 50.0,
-              child: Blob.fromID(
-                id: const ['6-4-32'],
-                size: 470.0,
-                styles: BlobStyles(
-                    fillType: BlobFillType.fill,
-                    gradient: const LinearGradient(colors: [
-                      Color(0xFF5FFBF1),
-                      Color(0xFF5679D2),
-                    ]).createShader(const Rect.fromLTRB(0, 00, 300, 300))),
+              // bottom: -50.0,
+              child: Image.asset(
+                "assets/images/image2.png",
+                width: width * 0.45,
               ),
             ),
-            Positioned(
-              bottom: 40.0,
-              left: -40.0,
-              child: Blob.fromID(
-                id: const ['6-4-32'],
-                size: 550.0,
-                styles: BlobStyles(
-                    fillType: BlobFillType.fill,
-                    gradient: const LinearGradient(colors: [
-                      Color(0xFF5FFBF1),
-                      Color(0xFF5679D2),
-                    ]).createShader(const Rect.fromLTRB(0, 00, 300, 300))),
-              ),
-            ),
+            // Positioned(
+            //   bottom: 40.0,
+            //   left: -40.0,
+            //   child: Image.asset("assets/images/image3.png"),
+            // ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,

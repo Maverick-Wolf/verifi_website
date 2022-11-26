@@ -22,6 +22,13 @@ class _LargeFeaturesScreenState extends State<LargeFeaturesScreen> {
         height: height * 0.87,
         child: Stack(
           children: [
+            Align(
+              alignment: Alignment.bottomLeft,
+              child: Image.asset(
+                "assets/images/image1.png",
+                width: width * 0.2,
+              ),
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,

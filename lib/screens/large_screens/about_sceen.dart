@@ -22,34 +22,7 @@ class _LargeAboutScreenState extends State<LargeAboutScreen> {
         height: height * 0.87,
         child: Stack(
           children: [
-            Positioned(
-              top: -60.0,
-              left: 420.0,
-              child: Blob.fromID(
-                id: const ['5-4-32'],
-                size: 700.0,
-                styles: BlobStyles(
-                    fillType: BlobFillType.fill,
-                    gradient: const LinearGradient(colors: [
-                      Color(0xFF5FFBF1),
-                      Color(0xFF5679D2),
-                    ]).createShader(const Rect.fromLTRB(0, 00, 300, 300))),
-              ),
-            ),
-            Positioned(
-              bottom: 110.0,
-              left: 250.0,
-              child: Blob.fromID(
-                id: const ['6-4-32'],
-                size: 500.0,
-                styles: BlobStyles(
-                    fillType: BlobFillType.fill,
-                    gradient: const LinearGradient(colors: [
-                      Color(0xFF5FFBF1),
-                      Color(0xFF5679D2),
-                    ]).createShader(const Rect.fromLTRB(300, 00, 00, 300))),
-              ),
-            ),
+            Center(child: Image.asset("assets/images/image5.png")),
             Center(
               child: SizedBox(
                 height: height * 0.6,
@@ -92,19 +65,19 @@ class _LargeAboutScreenState extends State<LargeAboutScreen> {
                           color: white,
                           size: 40,
                         ),
-                         SizedBox(width: 20),
+                        SizedBox(width: 20),
                         FaIcon(
                           FontAwesomeIcons.linkedin,
                           color: white,
                           size: 40,
                         ),
-                         SizedBox(width: 20),
+                        SizedBox(width: 20),
                         FaIcon(
                           FontAwesomeIcons.twitter,
                           color: white,
                           size: 40,
                         ),
-                         SizedBox(width: 20),
+                        SizedBox(width: 20),
                         Icon(
                           Icons.mail,
                           color: white,
