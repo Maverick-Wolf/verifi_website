@@ -45,6 +45,7 @@ class _CardConatinerState extends State<CardConatiner> {
             ),
             Text(
               widget.title,
+              textAlign: TextAlign.center,
               style: const TextStyle(
                   color: white,
                   fontSize: 24.0,

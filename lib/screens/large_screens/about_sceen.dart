@@ -23,32 +23,40 @@ class _LargeAboutScreenState extends State<LargeAboutScreen> {
         child: Stack(
           children: [
             Positioned(
-              top: -60.0,
-              left: 420.0,
-              child: Blob.fromID(
-                id: const ['5-4-32'],
-                size: 700.0,
-                styles: BlobStyles(
-                    fillType: BlobFillType.fill,
-                    gradient: const LinearGradient(colors: [
-                      Color(0xFF5FFBF1),
-                      Color(0xFF5679D2),
-                    ]).createShader(const Rect.fromLTRB(0, 00, 300, 300))),
+              bottom: 190.0,
+              left: 280.0,
+              child: Image.asset(
+                "assets/images/blob3.png",
+                height: 400,
               ),
+              // Blob.fromID(
+              //   id: const ['6-4-32'],
+              //   size: 500.0,
+              //   styles: BlobStyles(
+              //       fillType: BlobFillType.fill,
+              //       gradient: const LinearGradient(colors: [
+              //         Color(0xFF5FFBF1),
+              //         Color(0xFF5679D2),
+              //       ]).createShader(const Rect.fromLTRB(300, 00, 00, 300))),
+              // ),
             ),
             Positioned(
-              bottom: 110.0,
-              left: 250.0,
-              child: Blob.fromID(
-                id: const ['6-4-32'],
-                size: 500.0,
-                styles: BlobStyles(
-                    fillType: BlobFillType.fill,
-                    gradient: const LinearGradient(colors: [
-                      Color(0xFF5FFBF1),
-                      Color(0xFF5679D2),
-                    ]).createShader(const Rect.fromLTRB(300, 00, 00, 300))),
+              top: 20.0,
+              left: 450.0,
+              child: Image.asset(
+                "assets/images/blob4.png",
+                height: 550,
               ),
+              // Blob.fromID(
+              //   id: const ['5-4-32'],
+              //   size: 700.0,
+              //   styles: BlobStyles(
+              //       fillType: BlobFillType.fill,
+              //       gradient: const LinearGradient(colors: [
+              //         Color(0xFF5FFBF1),
+              //         Color(0xFF5679D2),
+              //       ]).createShader(const Rect.fromLTRB(0, 00, 300, 300))),
+              // ),
             ),
             Center(
               child: SizedBox(
@@ -70,6 +78,7 @@ class _LargeAboutScreenState extends State<LargeAboutScreen> {
                         style: TextStyle(
                             color: white,
                             fontSize: 16.0,
+                            // fontFamily: "Sans",
                             fontWeight: FontWeight.w500),
                         textAlign: TextAlign.center,
                       ),
@@ -92,19 +101,19 @@ class _LargeAboutScreenState extends State<LargeAboutScreen> {
                           color: white,
                           size: 40,
                         ),
-                         SizedBox(width: 20),
+                        SizedBox(width: 20),
                         FaIcon(
                           FontAwesomeIcons.linkedin,
                           color: white,
                           size: 40,
                         ),
-                         SizedBox(width: 20),
+                        SizedBox(width: 20),
                         FaIcon(
                           FontAwesomeIcons.twitter,
                           color: white,
                           size: 40,
                         ),
-                         SizedBox(width: 20),
+                        SizedBox(width: 20),
                         Icon(
                           Icons.mail,
                           color: white,
