@@ -47,7 +47,7 @@ class LargeWorkScreen extends StatelessWidget {
               width: width * 0.08,
             ),
             SizedBox(
-              width: width * 0.5,
+              width: width * 0.47,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
