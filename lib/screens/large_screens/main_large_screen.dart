@@ -71,22 +71,121 @@ class _LargeScreenState extends State<LargeScreen> {
                   ],
                 ),
               ),
-              DotsIndicator(
-                dotsCount: 5,
-                onTap: (position) {
-                  controller.animateToPage(position.toInt(),
-                      duration: const Duration(milliseconds: 1000),
-                      curve: Curves.easeInOutSine);
-                },
-                position: _currentIndex.toDouble(),
-                decorator: DotsDecorator(
-                    size: const Size.square(9.0),
-                    activeSize: const Size(9.0, 18.0),
-                    activeShape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(5.0)),
-                    color: Colors.white,
-                    activeColor: Colors.blue),
-                axis: Axis.vertical,
+              Column(
+                children: [
+                  InkWell(
+                    onTap: () {
+                      controller.animateToPage(0,
+                          duration: const Duration(milliseconds: 1000),
+                          curve: Curves.easeInOutSine);
+                    },
+                    child: RotatedBox(
+                      quarterTurns: 1,
+                      child: Text(
+                        "Home",
+                        style: TextStyle(
+                            color:
+                                _currentIndex == 0 ? white : Colors.grey[300],
+                            fontSize: 15.0,
+                            fontWeight: _currentIndex == 0
+                                ? FontWeight.bold
+                                : FontWeight.normal),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20.0,
+                  ),
+                  InkWell(
+                    onTap: () {
+                      controller.animateToPage(1,
+                          duration: const Duration(milliseconds: 1000),
+                          curve: Curves.easeInOutSine);
+                    },
+                    child: RotatedBox(
+                      quarterTurns: 1,
+                      child: Text(
+                        "Work",
+                        style: TextStyle(
+                            color:
+                                _currentIndex == 1 ? white : Colors.grey[300],
+                            fontSize: 15.0,
+                            fontWeight: _currentIndex == 1
+                                ? FontWeight.bold
+                                : FontWeight.normal),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20.0,
+                  ),
+                  InkWell(
+                    onTap: () {
+                      controller.animateToPage(2,
+                          duration: const Duration(milliseconds: 1000),
+                          curve: Curves.easeInOutSine);
+                    },
+                    child: RotatedBox(
+                      quarterTurns: 1,
+                      child: Text(
+                        "Features",
+                        style: TextStyle(
+                            color:
+                                _currentIndex == 2 ? white : Colors.grey[300],
+                            fontSize: 15.0,
+                            fontWeight: _currentIndex == 2
+                                ? FontWeight.bold
+                                : FontWeight.normal),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20.0,
+                  ),
+                  InkWell(
+                    onTap: () {
+                      controller.animateToPage(3,
+                          duration: const Duration(milliseconds: 1000),
+                          curve: Curves.easeInOutSine);
+                    },
+                    child: RotatedBox(
+                      quarterTurns: 1,
+                      child: Text(
+                        "Future plans",
+                        style: TextStyle(
+                            color:
+                                _currentIndex == 3 ? white : Colors.grey[300],
+                            fontSize: 15.0,
+                            fontWeight: _currentIndex == 3
+                                ? FontWeight.bold
+                                : FontWeight.normal),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20.0,
+                  ),
+                  InkWell(
+                    onTap: () {
+                      controller.animateToPage(4,
+                          duration: const Duration(milliseconds: 1000),
+                          curve: Curves.easeInOutSine);
+                    },
+                    child: RotatedBox(
+                      quarterTurns: 1,
+                      child: Text(
+                        "About",
+                        style: TextStyle(
+                            color:
+                                _currentIndex == 4 ? white : Colors.grey[300],
+                            fontSize: 15.0,
+                            fontWeight: _currentIndex == 4
+                                ? FontWeight.bold
+                                : FontWeight.normal),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
