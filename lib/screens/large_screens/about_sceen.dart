@@ -2,6 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:blobs/blobs.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:verifi_website/constants.dart';
 import 'package:verifi_website/theme.dart';
 
 class LargeAboutScreen extends StatefulWidget {
@@ -76,7 +77,7 @@ class _LargeAboutScreenState extends State<LargeAboutScreen> {
                     SizedBox(
                       width: width * 0.45,
                       child: const AutoSizeText(
-                        "VeriFi is a web3 tech company. Our mission is to build software that unites digital communities within the physical world. We plan to revolutionize how the metaverse engages with the universe. We believe freely accessible WiFi around the world is the first step.",
+                        aboutText,
                         style: TextStyle(
                             color: white,
                             fontSize: 16.0,
@@ -123,7 +124,7 @@ class _LargeAboutScreenState extends State<LargeAboutScreen> {
                           size: 40,
                         ),
                       ],
-                    )
+                    ),
                   ],
                 ),
               ),

@@ -12,45 +12,48 @@ class SmallHomeScreen extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: primaryColor,
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const AutoSizeText(
-            "connect\nwithout limits",
-            maxLines: 2,
-            style: TextStyle(
-                color: white, fontSize: 40.0, fontWeight: FontWeight.bold),
-          ),
-          const AutoSizeText(
-            "we build software that unites digital communities within the physical world",
-            maxLines: 2,
-            style: TextStyle(color: grey, fontSize: 17.0),
-          ),
-          SizedBox(
-            height: height * 0.05,
-          ),
-          Container(
-            width: 120.0,
-            height: 35.0,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15.0),
-                border: Border.all(color: white)),
-            child: const Center(
-              child: AutoSizeText(
-                'Join Our Discord',
-                style: TextStyle(color: white, fontSize: 13.0),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 30.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const AutoSizeText(
+              "connect\nwithout limits",
+              maxLines: 2,
+              style: TextStyle(
+                  color: white, fontSize: 40.0, fontWeight: FontWeight.bold),
+            ),
+            const AutoSizeText(
+              "we build software that unites digital communities within the physical world",
+              maxLines: 2,
+              style: TextStyle(color: grey, fontSize: 17.0),
+            ),
+            SizedBox(
+              height: height * 0.05,
+            ),
+            Container(
+              width: 120.0,
+              height: 35.0,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15.0),
+                  border: Border.all(color: white)),
+              child: const Center(
+                child: AutoSizeText(
+                  'Join Our Discord',
+                  style: TextStyle(color: white, fontSize: 13.0),
+                ),
               ),
             ),
-          ),
-          SizedBox(
-            height: height * 0.05,
-          ),
-          Center(
-            child: Lottie.asset("assets/lotties/home_page.json",
-                width: width * 0.8, height: height * 0.4),
-          )
-        ],
+            SizedBox(
+              height: height * 0.05,
+            ),
+            Center(
+              child: Lottie.asset("assets/lotties/home_page.json",
+                  width: width * 0.8, height: height * 0.4),
+            )
+          ],
+        ),
       ),
     );
   }
