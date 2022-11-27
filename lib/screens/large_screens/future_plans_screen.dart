@@ -3,7 +3,7 @@ import 'package:blobs/blobs.dart';
 import 'package:flutter/material.dart';
 import 'package:verifi_website/theme.dart';
 
-import '../../widgets/crad_container.dart';
+import '../../widgets/card_container.dart';
 
 class LargeFuturePlansScreen extends StatefulWidget {
   const LargeFuturePlansScreen({Key? key}) : super(key: key);
