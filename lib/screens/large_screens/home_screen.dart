@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:verifi_website/theme.dart';
@@ -20,14 +21,15 @@ class LargeHomeScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text(
+                const AutoSizeText(
                   "connect\nwithout limits",
+                  maxLines: 2,
                   style: TextStyle(
                       color: white,
                       fontSize: 60.0,
                       fontWeight: FontWeight.bold),
                 ),
-                const Text(
+                const AutoSizeText(
                   "we build software that unites digital communities within the physical world",
                   maxLines: 2,
                   style: TextStyle(color: grey, fontSize: 23.0),
@@ -42,7 +44,7 @@ class LargeHomeScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(15.0),
                       border: Border.all(color: white)),
                   child: const Center(
-                    child: Text(
+                    child: AutoSizeText(
                       'Join Our Discord',
                       style: TextStyle(color: white, fontSize: 17.0),
                     ),

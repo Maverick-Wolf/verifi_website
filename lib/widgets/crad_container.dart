@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:verifi_website/theme.dart';
 
@@ -43,8 +44,9 @@ class _CardConatinerState extends State<CardConatiner> {
               height: height * 0.09,
               width: width * 0.058,
             ),
-            Text(
+            AutoSizeText(
               widget.title,
+              maxLines: 1,
               textAlign: TextAlign.center,
               style: const TextStyle(
                   color: white,
@@ -54,6 +56,7 @@ class _CardConatinerState extends State<CardConatiner> {
             ),
             Text(
               widget.description,
+              maxLines: 6,
               style: const TextStyle(
                   color: grey, fontSize: 12.0, fontFamily: font),
               textAlign: TextAlign.center,
