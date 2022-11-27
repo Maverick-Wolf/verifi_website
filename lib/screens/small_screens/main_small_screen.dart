@@ -51,10 +51,10 @@ class SmallScreen extends StatelessWidget {
                   pageSnapping: false,
                   scrollDirection: Axis.vertical,
                   children: const [
-                    // SmallHomeScreen(),
-                    // SmallWorkScreen(),
+                    SmallHomeScreen(),
+                    SmallWorkScreen(),
                     SmallFuturePlansScreen(),
-                    // SmallAboutScreen(),
+                    SmallAboutScreen(),
                   ],
                 ),
               ),
