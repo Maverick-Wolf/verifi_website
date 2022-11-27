@@ -47,6 +47,7 @@ class _CardConatinerState extends State<CardConatiner> {
             AutoSizeText(
               widget.title,
               maxLines: 1,
+              textAlign: TextAlign.center,
               style: const TextStyle(
                   color: white,
                   fontSize: 24.0,

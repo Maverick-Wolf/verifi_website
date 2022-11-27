@@ -2,6 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:blobs/blobs.dart';
 import 'package:flutter/material.dart';
 import 'package:verifi_website/theme.dart';
+import 'dart:math' as math;
 
 import '../../widgets/crad_container.dart';
 
@@ -25,17 +26,44 @@ class _LargeFuturePlansScreenState extends State<LargeFuturePlansScreen> {
         child: Stack(
           children: [
             Positioned(
-              // bottom: -50.0,
+              bottom: 20.0,
+              left: 120.0,
               child: Image.asset(
-                "assets/images/image2.png",
-                width: width * 0.45,
+                "assets/images/blob2.png",
+                height: 400,
               ),
+              // Transform.rotate(
+              //   angle: -math.pi * 0.7,
+              //   child: Blob.fromID(
+              //     id: const ['5-5-32'],
+              //     size: 470.0,
+              //     styles: BlobStyles(
+              //         fillType: BlobFillType.fill,
+              //         gradient: const LinearGradient(colors: [
+              //           Color(0xFF5FFBF1),
+              //           Color(0xFF5679D2),
+              //         ]).createShader(const Rect.fromLTRB(00, 100, 300, 400))),
+              //   ),
+              // ),
             ),
-            // Positioned(
-            //   bottom: 40.0,
-            //   left: -40.0,
-            //   child: Image.asset("assets/images/image3.png"),
-            // ),
+            Positioned(
+                bottom: 110.0,
+                left: -140.0,
+                child: Image.asset(
+                  "assets/images/blob1.png",
+                  height: 450,
+                )
+                // Blob.fromID(
+                //   id: const ['6-4-32'],
+                //   size: 550.0,
+                //   styles: BlobStyles(
+                //       fillType: BlobFillType.fill,
+                //       gradient: const LinearGradient(colors: [
+                //         Color(0xFF5FFBF1),
+                //         Color(0xFF5679D2),
+                //       ]).createShader(const Rect.fromLTRB(0, 00, 300, 300))),
+                // ),
+                ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -54,8 +82,10 @@ class _LargeFuturePlansScreenState extends State<LargeFuturePlansScreen> {
                 ),
                 SizedBox(
                     height: height,
+                    width: width * 0.4,
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Column(
                           children: [

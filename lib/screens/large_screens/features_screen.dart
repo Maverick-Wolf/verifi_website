@@ -23,12 +23,21 @@ class _LargeFeaturesScreenState extends State<LargeFeaturesScreen> {
         height: height * 0.87,
         child: Stack(
           children: [
-            Align(
-              alignment: Alignment.bottomLeft,
+            Positioned(
+              bottom: -150.0,
+              left: -150.0,
               child: Image.asset(
-                "assets/images/image1.png",
-                width: width * 0.2,
+                "assets/images/blob0.png",
+                height: 400,
               ),
+              // Blob.fromID(
+              //   id: const ['6-4-32'],
+              //   size: 470.0,
+              //   styles: BlobStyles(
+              //       gradient: const LinearGradient(
+              //               colors: [Color(0xFFff5f6d), Color(0xFFffc371)])
+              //           .createShader(const Rect.fromLTRB(0, 0, 300, 300))),
+              // ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -53,6 +62,9 @@ class _LargeFeaturesScreenState extends State<LargeFeaturesScreen> {
                         "up and running features we have on our platform at the moment",
                         maxLines: 2,
                         style: TextStyle(color: grey, fontSize: 23.0),
+                      ),
+                      SizedBox(
+                        height: height * 0.1,
                       ),
                     ],
                   ),

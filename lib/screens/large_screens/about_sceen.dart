@@ -23,7 +23,42 @@ class _LargeAboutScreenState extends State<LargeAboutScreen> {
         height: height * 0.87,
         child: Stack(
           children: [
-            Center(child: Image.asset("assets/images/image5.png")),
+            Positioned(
+              bottom: 190.0,
+              left: 280.0,
+              child: Image.asset(
+                "assets/images/blob3.png",
+                height: 400,
+              ),
+              // Blob.fromID(
+              //   id: const ['6-4-32'],
+              //   size: 500.0,
+              //   styles: BlobStyles(
+              //       fillType: BlobFillType.fill,
+              //       gradient: const LinearGradient(colors: [
+              //         Color(0xFF5FFBF1),
+              //         Color(0xFF5679D2),
+              //       ]).createShader(const Rect.fromLTRB(300, 00, 00, 300))),
+              // ),
+            ),
+            Positioned(
+              top: 20.0,
+              left: 450.0,
+              child: Image.asset(
+                "assets/images/blob4.png",
+                height: 550,
+              ),
+              // Blob.fromID(
+              //   id: const ['5-4-32'],
+              //   size: 700.0,
+              //   styles: BlobStyles(
+              //       fillType: BlobFillType.fill,
+              //       gradient: const LinearGradient(colors: [
+              //         Color(0xFF5FFBF1),
+              //         Color(0xFF5679D2),
+              //       ]).createShader(const Rect.fromLTRB(0, 00, 300, 300))),
+              // ),
+            ),
             Center(
               child: SizedBox(
                 height: height * 0.6,
@@ -45,6 +80,7 @@ class _LargeAboutScreenState extends State<LargeAboutScreen> {
                         style: TextStyle(
                             color: white,
                             fontSize: 16.0,
+                            // fontFamily: "Sans",
                             fontWeight: FontWeight.w500),
                         maxLines: 5,
                         textAlign: TextAlign.center,
