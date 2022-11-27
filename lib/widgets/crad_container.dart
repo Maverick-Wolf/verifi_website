@@ -28,6 +28,7 @@ class _CardConatinerState extends State<CardConatiner> {
       onEnter: (event) => onEntered(true),
       onExit: (event) => onEntered(false),
       child: AnimatedContainer(
+        transformAlignment: FractionalOffset.center,
         duration: const Duration(milliseconds: 200),
         transform: transform,
         padding: const EdgeInsets.all(10.0),

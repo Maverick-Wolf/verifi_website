@@ -42,7 +42,7 @@ class LargeWorkScreen extends StatelessWidget {
                     ),
                   ),
                   Lottie.asset("assets/lotties/work_page.json",
-                      width: width * 0.4, height: height * 0.65),
+                      width: width * 0.4, height: height * 0.63),
                 ],
               ),
             ),
