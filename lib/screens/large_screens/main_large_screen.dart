@@ -86,7 +86,7 @@ class _LargeScreenState extends State<LargeScreen> {
                         style: TextStyle(
                             color:
                                 _currentIndex == 0 ? white : Colors.grey[300],
-                            fontSize: 15.0,
+                            fontSize: 20.0,
                             fontWeight: _currentIndex == 0
                                 ? FontWeight.bold
                                 : FontWeight.normal),
@@ -109,7 +109,7 @@ class _LargeScreenState extends State<LargeScreen> {
                         style: TextStyle(
                             color:
                                 _currentIndex == 1 ? white : Colors.grey[300],
-                            fontSize: 15.0,
+                            fontSize: 20.0,
                             fontWeight: _currentIndex == 1
                                 ? FontWeight.bold
                                 : FontWeight.normal),
@@ -132,7 +132,7 @@ class _LargeScreenState extends State<LargeScreen> {
                         style: TextStyle(
                             color:
                                 _currentIndex == 2 ? white : Colors.grey[300],
-                            fontSize: 15.0,
+                            fontSize: 20.0,
                             fontWeight: _currentIndex == 2
                                 ? FontWeight.bold
                                 : FontWeight.normal),
@@ -155,7 +155,7 @@ class _LargeScreenState extends State<LargeScreen> {
                         style: TextStyle(
                             color:
                                 _currentIndex == 3 ? white : Colors.grey[300],
-                            fontSize: 15.0,
+                            fontSize: 20.0,
                             fontWeight: _currentIndex == 3
                                 ? FontWeight.bold
                                 : FontWeight.normal),
@@ -178,7 +178,7 @@ class _LargeScreenState extends State<LargeScreen> {
                         style: TextStyle(
                             color:
                                 _currentIndex == 4 ? white : Colors.grey[300],
-                            fontSize: 15.0,
+                            fontSize: 20.0,
                             fontWeight: _currentIndex == 4
                                 ? FontWeight.bold
                                 : FontWeight.normal),

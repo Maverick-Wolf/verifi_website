@@ -2,21 +2,21 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:verifi_website/theme.dart';
 
-class CardConatiner extends StatefulWidget {
+class SmallCardConatiner extends StatefulWidget {
   final String image;
   final String title;
   final String description;
-  const CardConatiner(
+  const SmallCardConatiner(
       {required this.image,
       super.key,
       required this.title,
       required this.description});
 
   @override
-  State<CardConatiner> createState() => _CardConatinerState();
+  State<SmallCardConatiner> createState() => _SmallCardConatinerState();
 }
 
-class _CardConatinerState extends State<CardConatiner> {
+class _SmallCardConatinerState extends State<SmallCardConatiner> {
   bool isHovered = false;
   @override
   Widget build(BuildContext context) {
@@ -35,15 +35,15 @@ class _CardConatinerState extends State<CardConatiner> {
         decoration: const BoxDecoration(
             color: lightGrey,
             borderRadius: BorderRadius.all(Radius.circular(20.0))),
-        height: height * 0.38,
-        width: width * 0.1851,
+        height: height * 0.28,
+        width: width * 0.4,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Image.asset(
               'assets/images/${widget.image}.png',
-              height: height * 0.09,
-              width: width * 0.058,
+              height: height * 0.10,
+              // width: width * 0.1,
             ),
             AutoSizeText(
               widget.title,
@@ -51,7 +51,7 @@ class _CardConatinerState extends State<CardConatiner> {
               textAlign: TextAlign.center,
               style: const TextStyle(
                   color: white,
-                  fontSize: 24.0,
+                  fontSize: 16.0,
                   fontWeight: FontWeight.w600,
                   fontFamily: font),
             ),
@@ -59,7 +59,7 @@ class _CardConatinerState extends State<CardConatiner> {
               widget.description,
               maxLines: 6,
               style: const TextStyle(
-                  color: grey, fontSize: 12.0, fontFamily: font),
+                  color: grey, fontSize: 10.0, fontFamily: font),
               textAlign: TextAlign.center,
             ),
           ],

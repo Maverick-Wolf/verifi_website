@@ -2,6 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:blobs/blobs.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:verifi_website/constants.dart';
 import 'package:verifi_website/theme.dart';
 
 class LargeAboutScreen extends StatefulWidget {
@@ -13,6 +14,7 @@ class LargeAboutScreen extends StatefulWidget {
 
 class _LargeAboutScreenState extends State<LargeAboutScreen> {
   @override
+  
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
@@ -23,41 +25,49 @@ class _LargeAboutScreenState extends State<LargeAboutScreen> {
         height: height * 0.87,
         child: Stack(
           children: [
+            // Positioned(
+            //   bottom: 160.0,
+            //   left: 280.0,
+            //   child: Image.asset(
+            //     "assets/images/blob3.png",
+            //     height: 400,
+            //   ),
+            // Blob.fromID(
+            //   id: const ['6-4-32'],
+            //   size: 500.0,
+            //   styles: BlobStyles(
+            //       fillType: BlobFillType.fill,
+            //       gradient: const LinearGradient(colors: [
+            //         Color(0xFF5FFBF1),
+            //         Color(0xFF5679D2),
+            //       ]).createShader(const Rect.fromLTRB(300, 00, 00, 300))),
+            // ),
+            // ),
+            // Positioned(
+            //   top: 20.0,
+            //   left: 450.0,
+            //   child: Image.asset(
+            //     "assets/images/blob4.png",
+            //     height: 550,
+            //   ),
+            // Blob.fromID(
+            //   id: const ['5-4-32'],
+            //   size: 700.0,
+            //   styles: BlobStyles(
+            //       fillType: BlobFillType.fill,
+            //       gradient: const LinearGradient(colors: [
+            //         Color(0xFF5FFBF1),
+            //         Color(0xFF5679D2),
+            //       ]).createShader(const Rect.fromLTRB(0, 00, 300, 300))),
+            // ),
+            // ),
             Positioned(
-              bottom: 190.0,
-              left: 280.0,
+              top: -10.0,
+              left: width * 0.264,
               child: Image.asset(
                 "assets/images/blob3.png",
-                height: 400,
+                height: height * 0.89,
               ),
-              // Blob.fromID(
-              //   id: const ['6-4-32'],
-              //   size: 500.0,
-              //   styles: BlobStyles(
-              //       fillType: BlobFillType.fill,
-              //       gradient: const LinearGradient(colors: [
-              //         Color(0xFF5FFBF1),
-              //         Color(0xFF5679D2),
-              //       ]).createShader(const Rect.fromLTRB(300, 00, 00, 300))),
-              // ),
-            ),
-            Positioned(
-              top: 20.0,
-              left: 450.0,
-              child: Image.asset(
-                "assets/images/blob4.png",
-                height: 550,
-              ),
-              // Blob.fromID(
-              //   id: const ['5-4-32'],
-              //   size: 700.0,
-              //   styles: BlobStyles(
-              //       fillType: BlobFillType.fill,
-              //       gradient: const LinearGradient(colors: [
-              //         Color(0xFF5FFBF1),
-              //         Color(0xFF5679D2),
-              //       ]).createShader(const Rect.fromLTRB(0, 00, 300, 300))),
-              // ),
             ),
             Center(
               child: SizedBox(
@@ -76,7 +86,7 @@ class _LargeAboutScreenState extends State<LargeAboutScreen> {
                     SizedBox(
                       width: width * 0.45,
                       child: const AutoSizeText(
-                        "VeriFi is a web3 tech company. Our mission is to build software that unites digital communities within the physical world. We plan to revolutionize how the metaverse engages with the universe. We believe freely accessible WiFi around the world is the first step.",
+                        aboutText,
                         style: TextStyle(
                             color: white,
                             fontSize: 16.0,
@@ -104,26 +114,26 @@ class _LargeAboutScreenState extends State<LargeAboutScreen> {
                           color: white,
                           size: 40,
                         ),
-                        SizedBox(width: 20),
+                        SizedBox(width: 32),
                         FaIcon(
                           FontAwesomeIcons.linkedin,
                           color: white,
                           size: 40,
                         ),
-                        SizedBox(width: 20),
+                        SizedBox(width: 32),
                         FaIcon(
                           FontAwesomeIcons.twitter,
                           color: white,
                           size: 40,
                         ),
-                        SizedBox(width: 20),
+                        SizedBox(width: 32),
                         Icon(
                           Icons.mail,
                           color: white,
                           size: 40,
                         ),
                       ],
-                    )
+                    ),
                   ],
                 ),
               ),
