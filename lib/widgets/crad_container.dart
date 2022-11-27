@@ -38,7 +38,7 @@ class _CardConatinerState extends State<CardConatiner> {
         height: height * 0.38,
         width: width * 0.1851,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Image.asset(
               'assets/images/${widget.image}.png',

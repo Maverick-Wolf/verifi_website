@@ -24,11 +24,11 @@ class _LargeFeaturesScreenState extends State<LargeFeaturesScreen> {
         child: Stack(
           children: [
             Positioned(
-              bottom: -150.0,
-              left: -150.0,
+              bottom: height * 0.077,
+              left: -width * 0.03,
               child: Image.asset(
                 "assets/images/blob0.png",
-                height: 400,
+                height: height * 0.77,
               ),
               // Blob.fromID(
               //   id: const ['6-4-32'],
@@ -59,9 +59,11 @@ class _LargeFeaturesScreenState extends State<LargeFeaturesScreen> {
                             fontWeight: FontWeight.bold),
                       ),
                       const AutoSizeText(
-                        "up and running features we have on our platform at the moment",
+                        "up and running features we have on \nour platform at the moment",
                         maxLines: 2,
-                        style: TextStyle(color: grey, fontSize: 23.0),
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 219, 219, 219),
+                            fontSize: 23.0),
                       ),
                       SizedBox(
                         height: height * 0.1,

@@ -2,7 +2,6 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:blobs/blobs.dart';
 import 'package:flutter/material.dart';
 import 'package:verifi_website/theme.dart';
-import 'dart:math' as math;
 
 import '../../widgets/crad_container.dart';
 
@@ -22,15 +21,15 @@ class _LargeFuturePlansScreenState extends State<LargeFuturePlansScreen> {
       backgroundColor: primaryColor,
       body: SizedBox(
         width: width,
-        height: height * 0.87,
+        height: height,
         child: Stack(
           children: [
             Positioned(
-              bottom: 20.0,
-              left: 120.0,
+              bottom: height * 0.077,
+              left: width * 0.13,
               child: Image.asset(
                 "assets/images/blob2.png",
-                height: 400,
+                height: height * 0.647,
               ),
               // Transform.rotate(
               //   angle: -math.pi * 0.7,
@@ -47,11 +46,11 @@ class _LargeFuturePlansScreenState extends State<LargeFuturePlansScreen> {
               // ),
             ),
             Positioned(
-                bottom: 110.0,
-                left: -140.0,
+                bottom: height * 0.0925,
+                left: -width * 0.103,
                 child: Image.asset(
                   "assets/images/blob1.png",
-                  height: 450,
+                  height: height * 0.77,
                 )
                 // Blob.fromID(
                 //   id: const ['6-4-32'],
@@ -67,6 +66,7 @@ class _LargeFuturePlansScreenState extends State<LargeFuturePlansScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.max,
               children: [
                 SizedBox(
                   width: width * 0.4,
@@ -88,6 +88,7 @@ class _LargeFuturePlansScreenState extends State<LargeFuturePlansScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Column(
+                          mainAxisSize: MainAxisSize.max,
                           children: [
                             const CardConatiner(
                                 image: "achievements",
