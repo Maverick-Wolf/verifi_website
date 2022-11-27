@@ -60,7 +60,7 @@ class _LargeScreenState extends State<LargeScreen> {
                       _currentIndex = value;
                     });
                   },
-                  pageSnapping: true,
+                  pageSnapping: false,
                   scrollDirection: Axis.vertical,
                   children: const [
                     LargeHomeScreen(),
