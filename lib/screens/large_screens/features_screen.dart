@@ -49,8 +49,8 @@ class _LargeFeaturesScreenState extends State<LargeFeaturesScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      AutoSizeText(
+                    children: [
+                      const AutoSizeText(
                         "Current\nFeatures",
                         maxLines: 2,
                         style: TextStyle(
@@ -58,7 +58,7 @@ class _LargeFeaturesScreenState extends State<LargeFeaturesScreen> {
                             fontSize: 60.0,
                             fontWeight: FontWeight.bold),
                       ),
-                      AutoSizeText(
+                      const AutoSizeText(
                         "up and running features we have on our platform at the moment",
                         maxLines: 2,
                         style: TextStyle(color: grey, fontSize: 23.0),
