@@ -36,7 +36,7 @@ class SmallHomeScreen extends StatelessWidget {
               width: 120.0,
               height: 35.0,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15.0),
+                  borderRadius: BorderRadius.circular(8.0),
                   border: Border.all(color: white)),
               child: const Center(
                 child: AutoSizeText(

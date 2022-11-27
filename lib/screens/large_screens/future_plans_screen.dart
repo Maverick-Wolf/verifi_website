@@ -90,6 +90,7 @@ class _LargeFuturePlansScreenState extends State<LargeFuturePlansScreen> {
                         Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
+                            const SizedBox(height: 20),
                             const CardConatiner(
                                 image: "achievements",
                                 title: "Achievements",

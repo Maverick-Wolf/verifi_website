@@ -86,6 +86,7 @@ class _LargeFeaturesScreenState extends State<LargeFeaturesScreen> {
                         ),
                         Column(
                           children: [
+                            const SizedBox(height: 20),
                             const CardConatiner(
                                 image: "dynamic",
                                 title: "Dynamic Theming",
