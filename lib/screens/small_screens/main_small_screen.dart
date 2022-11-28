@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:verifi_website/screens/small_screens/about_screen.dart';
+import 'package:verifi_website/screens/small_screens/features_screen.dart';
 import 'package:verifi_website/screens/small_screens/future_plans_screen.dart';
 import 'package:verifi_website/screens/small_screens/home_sceen.dart';
 import 'package:verifi_website/screens/small_screens/work_screen.dart';
@@ -44,7 +45,7 @@ class SmallScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
-                height: height * 0.91,
+                height: height * 0.9,
                 width: width,
                 child: PageView(
                   controller: controller,
@@ -53,6 +54,7 @@ class SmallScreen extends StatelessWidget {
                   children: const [
                     SmallHomeScreen(),
                     SmallWorkScreen(),
+                    SmallFeaturesScreen(),
                     SmallFuturePlansScreen(),
                     SmallAboutScreen(),
                   ],
