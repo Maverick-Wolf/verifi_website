@@ -1,5 +1,7 @@
 import 'package:dots_indicator/dots_indicator.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:verifi_website/screens/large_screens/about_sceen.dart';
 import 'package:verifi_website/screens/large_screens/features_screen.dart';
 import 'package:verifi_website/screens/large_screens/future_plans_screen.dart';
@@ -53,22 +55,38 @@ class _LargeScreenState extends State<LargeScreen> {
               SizedBox(
                 height: height * 0.89,
                 width: width * 0.97,
-                child: PageView(
-                  controller: controller,
-                  onPageChanged: (value) {
-                    setState(() {
-                      _currentIndex = value;
-                    });
+                child: Listener(
+                  onPointerSignal: (pointerSignal) {
+                    if (pointerSignal is PointerScrollEvent) {
+                      if (pointerSignal.scrollDelta.dy > 0) {
+                        controller.nextPage(
+                            duration: const Duration(milliseconds: 500),
+                            curve: Curves.easeInOutSine);
+                      } else if (pointerSignal.scrollDelta.dy < 0) {
+                        controller.previousPage(
+                            duration: const Duration(milliseconds: 500),
+                            curve: Curves.easeInOutSine);
+                      }
+                    }
                   },
-                  pageSnapping: false,
-                  scrollDirection: Axis.vertical,
-                  children: const [
-                    LargeHomeScreen(),
-                    LargeWorkScreen(),
-                    LargeFeaturesScreen(),
-                    LargeFuturePlansScreen(),
-                    LargeAboutScreen(),
-                  ],
+                  child: PageView(
+                    physics: const NeverScrollableScrollPhysics(),
+                    controller: controller,
+                    onPageChanged: (value) {
+                      setState(() {
+                        _currentIndex = value;
+                      });
+                    },
+                    // pageSnapping: false,
+                    scrollDirection: Axis.vertical,
+                    children: const [
+                      LargeHomeScreen(),
+                      LargeWorkScreen(),
+                      LargeFeaturesScreen(),
+                      LargeFuturePlansScreen(),
+                      LargeAboutScreen(),
+                    ],
+                  ),
                 ),
               ),
               Column(
