@@ -1,6 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:blobs/blobs.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:verifi_website/theme.dart';
 import 'package:verifi_website/widgets/card_container.dart';
 
@@ -30,14 +31,6 @@ class _LargeFeaturesScreenState extends State<LargeFeaturesScreen> {
                 "assets/images/blob0.png",
                 height: height * 0.77,
               ),
-              // Blob.fromID(
-              //   id: const ['6-4-32'],
-              //   size: 470.0,
-              //   styles: BlobStyles(
-              //       gradient: const LinearGradient(
-              //               colors: [Color(0xFFff5f6d), Color(0xFFffc371)])
-              //           .createShader(const Rect.fromLTRB(0, 0, 300, 300))),
-              // ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -84,23 +77,34 @@ class _LargeFeaturesScreenState extends State<LargeFeaturesScreen> {
                         SizedBox(
                           width: height * 0.03,
                         ),
-                        Column(
-                          children: [
-                            const SizedBox(height: 20),
-                            const CardConatiner(
-                                image: "dynamic",
-                                title: "Dynamic Theming",
-                                description:
-                                    "Every user’s app experience is uniquely themed based off your PFP. Simply add your favorite NFT from your wallet, and automatically see your app change to match."),
-                            SizedBox(
-                              height: height * 0.03,
+                        AnimationLimiter(
+                          child: Column(
+                            children: AnimationConfiguration.toStaggeredList(
+                              duration: const Duration(milliseconds: 600),
+                              childAnimationBuilder: (widget) => SlideAnimation(
+                                horizontalOffset: 50.0,
+                                child: FadeInAnimation(
+                                  child: widget,
+                                ),
+                              ),
+                              children: [
+                                const SizedBox(height: 20),
+                                const CardConatiner(
+                                    image: "dynamic",
+                                    title: "Dynamic Theming",
+                                    description:
+                                        "Every user’s app experience is uniquely themed based off your PFP. Simply add your favorite NFT from your wallet, and automatically see your app change to match."),
+                                SizedBox(
+                                  height: height * 0.03,
+                                ),
+                                const CardConatiner(
+                                    image: "wallet",
+                                    title: "Wallet Support",
+                                    description:
+                                        "Your profile is directly linked to your Ethereum wallet. This allows you to receive airdrops, POAPs, NFT collectibles, and other future incentives."),
+                              ],
                             ),
-                            const CardConatiner(
-                                image: "wallet",
-                                title: "Wallet Support",
-                                description:
-                                    "Your profile is directly linked to your Ethereum wallet. This allows you to receive airdrops, POAPs, NFT collectibles, and other future incentives."),
-                          ],
+                          ),
                         ),
                       ],
                     )),
