@@ -74,6 +74,8 @@ class _LargeScreenState extends State<LargeScreen> {
               Column(
                 children: [
                   InkWell(
+                    splashColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
                     onTap: () {
                       controller.animateToPage(0,
                           duration: const Duration(milliseconds: 1000),
@@ -86,7 +88,7 @@ class _LargeScreenState extends State<LargeScreen> {
                         style: TextStyle(
                             color:
                                 _currentIndex == 0 ? white : Colors.grey[300],
-                            fontSize: 20.0,
+                            fontSize: 18.0,
                             fontWeight: _currentIndex == 0
                                 ? FontWeight.bold
                                 : FontWeight.normal),
@@ -97,6 +99,8 @@ class _LargeScreenState extends State<LargeScreen> {
                     height: 20.0,
                   ),
                   InkWell(
+                    splashColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
                     onTap: () {
                       controller.animateToPage(1,
                           duration: const Duration(milliseconds: 1000),
@@ -109,7 +113,7 @@ class _LargeScreenState extends State<LargeScreen> {
                         style: TextStyle(
                             color:
                                 _currentIndex == 1 ? white : Colors.grey[300],
-                            fontSize: 20.0,
+                            fontSize: 18.0,
                             fontWeight: _currentIndex == 1
                                 ? FontWeight.bold
                                 : FontWeight.normal),
@@ -120,6 +124,8 @@ class _LargeScreenState extends State<LargeScreen> {
                     height: 20.0,
                   ),
                   InkWell(
+                    splashColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
                     onTap: () {
                       controller.animateToPage(2,
                           duration: const Duration(milliseconds: 1000),
@@ -132,7 +138,7 @@ class _LargeScreenState extends State<LargeScreen> {
                         style: TextStyle(
                             color:
                                 _currentIndex == 2 ? white : Colors.grey[300],
-                            fontSize: 20.0,
+                            fontSize: 18.0,
                             fontWeight: _currentIndex == 2
                                 ? FontWeight.bold
                                 : FontWeight.normal),
@@ -143,6 +149,8 @@ class _LargeScreenState extends State<LargeScreen> {
                     height: 20.0,
                   ),
                   InkWell(
+                    splashColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
                     onTap: () {
                       controller.animateToPage(3,
                           duration: const Duration(milliseconds: 1000),
@@ -155,7 +163,7 @@ class _LargeScreenState extends State<LargeScreen> {
                         style: TextStyle(
                             color:
                                 _currentIndex == 3 ? white : Colors.grey[300],
-                            fontSize: 20.0,
+                            fontSize: 18.0,
                             fontWeight: _currentIndex == 3
                                 ? FontWeight.bold
                                 : FontWeight.normal),
@@ -166,6 +174,8 @@ class _LargeScreenState extends State<LargeScreen> {
                     height: 20.0,
                   ),
                   InkWell(
+                    splashColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
                     onTap: () {
                       controller.animateToPage(4,
                           duration: const Duration(milliseconds: 1000),
@@ -178,7 +188,7 @@ class _LargeScreenState extends State<LargeScreen> {
                         style: TextStyle(
                             color:
                                 _currentIndex == 4 ? white : Colors.grey[300],
-                            fontSize: 20.0,
+                            fontSize: 18.0,
                             fontWeight: _currentIndex == 4
                                 ? FontWeight.bold
                                 : FontWeight.normal),
