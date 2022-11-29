@@ -1,6 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:blobs/blobs.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:verifi_website/theme.dart';
 
 import '../../widgets/card_container.dart';
@@ -31,19 +32,6 @@ class _LargeFuturePlansScreenState extends State<LargeFuturePlansScreen> {
                 "assets/images/blob2.png",
                 height: height * 0.647,
               ),
-              // Transform.rotate(
-              //   angle: -math.pi * 0.7,
-              //   child: Blob.fromID(
-              //     id: const ['5-5-32'],
-              //     size: 470.0,
-              //     styles: BlobStyles(
-              //         fillType: BlobFillType.fill,
-              //         gradient: const LinearGradient(colors: [
-              //           Color(0xFF5FFBF1),
-              //           Color(0xFF5679D2),
-              //         ]).createShader(const Rect.fromLTRB(00, 100, 300, 400))),
-              //   ),
-              // ),
             ),
             Positioned(
                 bottom: height * 0.0925,
@@ -51,18 +39,7 @@ class _LargeFuturePlansScreenState extends State<LargeFuturePlansScreen> {
                 child: Image.asset(
                   "assets/images/blob1.png",
                   height: height * 0.77,
-                )
-                // Blob.fromID(
-                //   id: const ['6-4-32'],
-                //   size: 550.0,
-                //   styles: BlobStyles(
-                //       fillType: BlobFillType.fill,
-                //       gradient: const LinearGradient(colors: [
-                //         Color(0xFF5FFBF1),
-                //         Color(0xFF5679D2),
-                //       ]).createShader(const Rect.fromLTRB(0, 00, 300, 300))),
-                // ),
-                ),
+                )),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -87,24 +64,35 @@ class _LargeFuturePlansScreenState extends State<LargeFuturePlansScreen> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Column(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            const SizedBox(height: 20),
-                            const CardConatiner(
-                                image: "achievements",
-                                title: "Achievements",
-                                description:
-                                    "Contributions earn achievements which can earn you NFT wearables, real world collectibles, and more!"),
-                            SizedBox(
-                              height: height * 0.03,
+                        AnimationLimiter(
+                          child: Column(
+                            mainAxisSize: MainAxisSize.max,
+                            children: AnimationConfiguration.toStaggeredList(
+                              duration: const Duration(milliseconds: 600),
+                              childAnimationBuilder: (widget) => SlideAnimation(
+                                horizontalOffset: -50.0,
+                                child: FadeInAnimation(
+                                  child: widget,
+                                ),
+                              ),
+                              children: [
+                                const SizedBox(height: 20),
+                                const CardConatiner(
+                                    image: "achievements",
+                                    title: "Achievements",
+                                    description:
+                                        "Contributions earn achievements which can earn you NFT wearables, real world collectibles, and more!"),
+                                SizedBox(
+                                  height: height * 0.03,
+                                ),
+                                const CardConatiner(
+                                    image: "minting",
+                                    title: "VeriFi NFT Mint",
+                                    description:
+                                        "Our own NFTs will be made available, complete with wearables earned from achievements. Early adopters will be added to the whitelist."),
+                              ],
                             ),
-                            const CardConatiner(
-                                image: "minting",
-                                title: "VeriFi NFT Mint",
-                                description:
-                                    "Our own NFTs will be made available, complete with wearables earned from achievements. Early adopters will be added to the whitelist."),
-                          ],
+                          ),
                         ),
                         SizedBox(
                           width: height * 0.03,

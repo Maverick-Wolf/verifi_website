@@ -1,5 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:verifi_website/theme.dart';
 import 'package:verifi_website/widgets/small_card_container.dart';
 
@@ -58,22 +59,33 @@ class _SmallFuturePlansScreenState extends State<SmallFuturePlansScreen> {
                       SizedBox(
                         width: height * 0.03,
                       ),
-                      Column(
-                        children: [
-                          const SmallCardConatiner(
-                              image: "achievements",
-                              title: "Achievements",
-                              description:
-                                  "Contributions earn achievements which can earn you NFT wearables, real world collectibles, and more!"),
-                          SizedBox(
-                            height: height * 0.03,
+                      AnimationLimiter(
+                        child: Column(
+                          children: AnimationConfiguration.toStaggeredList(
+                            duration: const Duration(milliseconds: 400),
+                            childAnimationBuilder: (widget) => SlideAnimation(
+                              horizontalOffset: 50.0,
+                              child: FadeInAnimation(
+                                child: widget,
+                              ),
+                            ),
+                            children: [
+                              const SmallCardConatiner(
+                                  image: "achievements",
+                                  title: "Achievements",
+                                  description:
+                                      "Contributions earn achievements which can earn you NFT wearables, real world collectibles, and more!"),
+                              SizedBox(
+                                height: height * 0.03,
+                              ),
+                              const SmallCardConatiner(
+                                  image: "minting",
+                                  title: "VeriFi NFT Mint",
+                                  description:
+                                      "Our own NFTs will be made available, complete with wearables earned from achievements. Early adopters will be added to the whitelist."),
+                            ],
                           ),
-                          const SmallCardConatiner(
-                              image: "minting",
-                              title: "VeriFi NFT Mint",
-                              description:
-                                  "Our own NFTs will be made available, complete with wearables earned from achievements. Early adopters will be added to the whitelist."),
-                        ],
+                        ),
                       ),
                     ],
                   )

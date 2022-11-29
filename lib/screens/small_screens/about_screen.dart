@@ -1,5 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:verifi_website/constants.dart';
 import 'package:verifi_website/theme.dart';
@@ -86,33 +87,43 @@ class _SmallAboutScreenState extends State<SmallAboutScreen> {
                 SizedBox(
                   height: height * 0.05,
                 ),
-                Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: const [
-                    FaIcon(
-                      FontAwesomeIcons.github,
-                      color: white,
-                      size: 32,
+                AnimationLimiter(
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: AnimationConfiguration.toStaggeredList(
+                      duration: const Duration(milliseconds: 600),
+                      childAnimationBuilder: (widget) => SlideAnimation(
+                        child: FadeInAnimation(
+                          child: widget,
+                        ),
+                      ),
+                      children: const [
+                        FaIcon(
+                          FontAwesomeIcons.github,
+                          color: white,
+                          size: 32,
+                        ),
+                        SizedBox(width: 32),
+                        FaIcon(
+                          FontAwesomeIcons.linkedin,
+                          color: white,
+                          size: 32,
+                        ),
+                        SizedBox(width: 32),
+                        FaIcon(
+                          FontAwesomeIcons.twitter,
+                          color: white,
+                          size: 32,
+                        ),
+                        SizedBox(width: 32),
+                        Icon(
+                          Icons.mail,
+                          color: white,
+                          size: 32,
+                        ),
+                      ],
                     ),
-                    SizedBox(width: 32),
-                    FaIcon(
-                      FontAwesomeIcons.linkedin,
-                      color: white,
-                      size: 32,
-                    ),
-                    SizedBox(width: 32),
-                    FaIcon(
-                      FontAwesomeIcons.twitter,
-                      color: white,
-                      size: 32,
-                    ),
-                    SizedBox(width: 32),
-                    Icon(
-                      Icons.mail,
-                      color: white,
-                      size: 32,
-                    ),
-                  ],
+                  ),
                 )
               ],
             ),
